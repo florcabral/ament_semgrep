@@ -1,0 +1,27 @@
+<?xml version="1.0"?>
+<?xml-model href="http://download.ros.org/schema/package_format2.xsd" schematypens="http://www.w3.org/2001/XMLSchema"?>
+<package format="2">
+  <name>ament_cmake_semgrep</name>
+  <version>0.1.0</version>
+  <description>
+    The CMake API for ament_semgrep to perform static code analysis using Semgrep.
+  </description>
+
+  <maintainer email="florencia.cabralberenfus@canonical.com">Florencia Cabral</maintainer>
+
+  <author email="florencia.cabralberenfus@canonical.com">Florencia Cabral</author>
+
+  <buildtool_depend>ament_cmake_core</buildtool_depend>
+  <buildtool_depend>ament_cmake_test</buildtool_depend>
+
+  <buildtool_export_depend>ament_cmake_core</buildtool_export_depend>
+  <buildtool_export_depend>ament_cmake_test</buildtool_export_depend>
+  <buildtool_export_depend>ament_semgrep</buildtool_export_depend>
+
+  <test_depend>ament_cmake_copyright</test_depend>
+  <test_depend>ament_cmake_lint_cmake</test_depend>
+
+  <export>
+    <build_type>ament_cmake</build_type>
+  </export>
+</package>

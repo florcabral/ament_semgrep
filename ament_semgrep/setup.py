@@ -1,0 +1,40 @@
+from setuptools import find_packages
+from setuptools import setup
+
+package_name = 'ament_semgrep'
+
+setup(
+    name=package_name,
+    version='0.1.0',
+    packages=find_packages(exclude=['test']),
+    data_files=[
+        ('share/' + package_name, ['package.xml']),
+        ('share/ament_index/resource_index/packages',
+            ['resource/' + package_name]),
+    ],
+    install_requires=['setuptools'],
+    zip_safe=True,
+    author='Florencia Cabral',
+    author_email='florencia.cabralberenfus@canonical.com',
+    maintainer='Florencia Cabral',
+    maintainer_email='florencia.cabralberenfus@canonical.com',
+    url='https://github.com/ament/ament_lint',
+    download_url='https://github.com/ament/ament_lint/releases',
+    keywords=['ROS'],
+    classifiers=[
+        'Intended Audience :: Developers',
+        'Programming Language :: Python',
+        'Topic :: Software Development',
+    ],
+    description='Static code analysis using Semgrep.',
+    long_description="""\
+The ability to perform static code analysis using Semgrep
+and generate xUnit test result files.""",
+    tests_require=['pytest'],
+    entry_points={
+        'console_scripts': [
+            'ament_semgrep = ament_semgrep.main:main',
+        ],
+    },
+)
+
