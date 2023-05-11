@@ -23,6 +23,7 @@ setup(
     keywords=['ROS'],
     classifiers=[
         'Intended Audience :: Developers',
+        'License :: OSI Approved :: Apache Software License',
         'Programming Language :: Python',
         'Topic :: Software Development',
     ],
@@ -30,6 +31,7 @@ setup(
     long_description="""\
 The ability to perform static code analysis using Semgrep
 and generate xUnit test result files.""",
+    license='Apache License, Version 2.0',
     tests_require=['pytest'],
     entry_points={
         'console_scripts': [
