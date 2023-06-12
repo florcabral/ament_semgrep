@@ -12,9 +12,19 @@
 # See the License for the specific language governing permissions and
 # limitations under the License.
 
-find_package(ament_cmake_test QUIET REQUIRED)
+import os as o
+import subprocess as subp
 
-include("${ament_cmake_semgrep_DIR}/ament_semgrep.cmake")
+# Vulnerable to wildcard injection
+o.system("/bin/tar xvzf *")
+o.system('/bin/chown *')
+o.popen2('/bin/chmod *')
+subp.Popen('/bin/chown *', shell=True)
 
-ament_register_extension("ament_lint_auto" "ament_cmake_semgrep"
-  "ament_cmake_semgrep_lint_hook.cmake")
+# Not vulnerable to wildcard injection
+subp.Popen('/bin/rsync *')
+subp.Popen("/bin/chmod *")
+subp.Popen(['/bin/chown', '*'])
+subp.Popen(["/bin/chmod", sys.argv[1], "*"],
+                 stdin=subprocess.PIPE, stdout=subprocess.PIPE)
+o.spawnvp(os.P_WAIT, 'tar', ['tar', 'xvzf', '*'])
