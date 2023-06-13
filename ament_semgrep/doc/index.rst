@@ -19,4 +19,4 @@ How to run the check from within a CMake ament package as part of the tests?
 ----------------------------------------------------------------------------
 
 The CMake integration is provided by the package `ament_cmake_semgrep
-<https://github.com/ament/ament_lint>`_.
+<https://github.com/florcabral/ament_semgrep/tree/main/ament_cmake_semgrep>`_.
