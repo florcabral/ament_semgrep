@@ -33,9 +33,9 @@ How to run the check from within a CMake ament package as part of the tests?
     endif()
 
 When running multiple linters as part of the CMake tests the documentation of
-the package `ament_lint_auto <https://github.com/ament/ament_lint>`_ might
+the package `ament_lint_auto <https://github.com/ament/ament_lint/tree/rolling/ament_lint_auto>`_ might
 contain some useful information.
 
 The documentation of the package `ament_cmake_test
-<https://github.com/ament/ament_cmake>`_ provides more information on testing
+<https://github.com/ament/ament_cmake/tree/rolling/ament_cmake_test>`_ provides more information on testing
 in CMake ament packages.
